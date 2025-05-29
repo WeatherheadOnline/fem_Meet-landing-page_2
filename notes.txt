@@ -1,0 +1,68 @@
+I will attempt to use React together with SASS, for the first time, in this project. 
+
+Components I can make once and then re-use (+/- variables):
+- buttons (cyan and purple variants)
+- page numbers
+- combination of p.h2-like and p.description
+
+Sketching out the structure I think I'll need:
+*** = reusable component
+
+<root>
+<App>
+<header>
+  <div.logo-container></div>
+  <div.header-main-contents>
+    <div.header-image-touchscreen></div>
+    <div.header-desktop-left></div>
+    <div.header-central>                   
+      <h1></h1>
+      <p.description></p>
+      <div.button-wrapper>***
+        <button.cyan></button>***
+        <button.purple></button>***
+      </div.button-wrapper>
+    </div.header-central>
+    <div.header-desktop-right></div>
+  </div.header-main-contents>
+</header>
+
+<main>
+  <div.number-component>***
+    <div.number>
+      <p></p>
+    </div.number>
+  </div.number-component>
+  <div.image-container>//images//</div>
+  <div.main-contents>
+    <div.tagline></div>
+    <div.h2-p-wrapper>***
+      <p.h2-like></p>***
+      <p.description></p>***
+    </div.h2-p-wrapper>
+  </div.main-contents>
+</main>
+
+<footer>
+  <div.number-component>***
+    <div.number>
+      <p></p>
+    </div.number>
+  </div.number-component>
+  <div.h2-p-wrapper>***
+    <p.h2-like></p>***
+    <p.description></p>***
+  </div.h2-p-wrapper>
+  <div.button-wrapper>***
+    <button.purple></button>***
+  </div.button-wrapper>
+  <div.attribution></div>
+</footer>
+</App>
+</root>
+
+
+
+
+
+

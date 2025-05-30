@@ -25,6 +25,8 @@ Working on making the button its own component.
 - Added a number component that can have a number passed in as prop
 - Adding an image-container component for Main. Got an array of images passed from Main to Gallery -> render
 - Added SASS to get the images into a grid
+** Git commit **
+- Added text in the Main section. Made a WrapperH2P component that I can re-use in the footer. Passed in the h2 and p text contents -> rendered.
 
 
 
@@ -68,13 +70,13 @@ Sketching out the structure I think I'll need:
         <img src="..." alt="Man texting">
   </div>
 
-  <div.main-contents>
+  <div.text-contents>
     <div.tagline></div>
     <div.h2-p-wrapper>***
       <p.h2-like></p>***
       <p.description></p>***
     </div.h2-p-wrapper>
-  </div.main-contents>
+  </div.text-contents>
 </main>
 
 <footer>

@@ -44,6 +44,10 @@
   background-position: left;
 }
 
+main {
+  background-color: pink;
+}
+
 .image-container {
   display: grid;
   grid-template: 1fr 1fr/1fr 1fr;

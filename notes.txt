@@ -1,3 +1,4 @@
+~ 29/05/25 ~
 I will attempt to use React together with SASS, for the first time, in this project. 
 
 Components I can make once and then re-use (+/- variables):
@@ -5,14 +6,40 @@ Components I can make once and then re-use (+/- variables):
 - page numbers
 - combination of p.h2-like and p.description
 
+Sketched out the structure I think I'll need: see below.
+
+In react: added header, main and footer component files, and hooked them up so they're rendering to the screen now.
+
+~ 30/25/25 ~
+Working on making the button its own component.
+- Got a basic button imported from Button.js into Header.js. 
+- Got a button being added to a button-wrapper, and imported the wrapper into Header.js.
+- Able to pass props from ButtonWrapper into Button
+- Able to pass props from header, across to ButtonWrapper, into Button
+- Able to pass an array of values from header, across to ButtonWrapper -> button
+- Expanded the array to contain an array for each button, representing text, span text, and class name. Able to get this to render.
+- Added SASS to ensure I can style the button classes and the span text
+- Initialized more SASS files for each component
+- Moved button styling into buttons.sass
+- Added enough SASS to get the background images added and to get things in the right position relative to each other, including crude media queries for mobile vs desktop. Come back to add correct spacing later after I decide how I want to approach that.
+- Added a number component that can have a number passed in as prop
+- Adding an image-container component for Main. Got an array of images passed from Main to Gallery -> render
+- Added SASS to get the images into a grid
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+29/05/25
 Sketching out the structure I think I'll need:
 *** = reusable component
 
 <root>
 <App>
+
 <header>
   <div.logo-container></div>
-  <div.header-main-contents>
+
+  <div.header-contents>
     <div.header-image-touchscreen></div>
     <div.header-desktop-left></div>
     <div.header-central>                   
@@ -28,12 +55,19 @@ Sketching out the structure I think I'll need:
 </header>
 
 <main>
-  <div.number-component>***
+  <div.page-number>***
     <div.number>
       <p></p>
     </div.number>
-  </div.number-component>
-  <div.image-container>//images//</div>
+  </div.page-number>
+
+  <div.image-container>
+        <img src="..." alt="Woman in videocall">
+        <img src="..." alt="Women videochatting">
+        <img src="... alt="Men in meeting">
+        <img src="..." alt="Man texting">
+  </div>
+
   <div.main-contents>
     <div.tagline></div>
     <div.h2-p-wrapper>***
@@ -60,7 +94,7 @@ Sketching out the structure I think I'll need:
 </footer>
 </App>
 </root>
-
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
 

@@ -1,8 +1,13 @@
 import React from "react";
 
+{/* 
+    Button() takes props.myText as an array of arrays:  
+    [class, button-text, span-text(optional)]
+*/}
+
 function Button(props) {
     return(
-        <button className={props.mytext[0]}>{props.mytext[1]} <span>{props.mytext[2]}</span></button>
+        <button className={props.buttonInput[0]}>{props.buttonInput[1]} <span>{props.buttonInput[2]}</span></button>
     ) 
 };
 
@@ -11,9 +16,9 @@ class ButtonWrapper extends React.Component {
         super(props);
     }
     render() {
-        const buttons = this.props.thistext.map((buttonInput) => {
+        const buttons = this.props.buttonContents.map((input) => {
             return(
-                <Button mytext={buttonInput} />
+                <Button buttonInput={input} />
             )
         });
 

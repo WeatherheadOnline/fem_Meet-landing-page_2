@@ -2,14 +2,17 @@
 
 .page-number
     height: 100px
-    outline: 1px solid red
     width: max-content
     display: flex
     align-items: flex-end
+    background: linear-gradient(to right, transparent 48%, styles.$slate-300 49%, styles.$slate-300 51%, transparent 52%)
 
 .number
+    width: 30px  // placeholder
+    height: 30px  // placeholder
     border-radius: 50%
-    outline: 1px solid green
+    outline: 1px solid styles.$slate-300
+    background-color: styles.$white
 
 .number p
     color: styles.$slate-600

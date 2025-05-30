@@ -27,7 +27,8 @@ Working on making the button its own component.
 - Added SASS to get the images into a grid
 ** Git commit **
 - Added text in the Main section. Made a WrapperH2P component that I can re-use in the footer. Passed in the h2 and p text contents -> rendered.
-
+** Git commit **
+- Added a footer section, re-using the WrapperH2P and the ButtonWrapper elements.
 
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -85,10 +86,12 @@ Sketching out the structure I think I'll need:
       <p></p>
     </div.number>
   </div.number-component>
+
   <div.h2-p-wrapper>***
     <p.h2-like></p>***
     <p.description></p>***
   </div.h2-p-wrapper>
+
   <div.button-wrapper>***
     <button.purple></button>***
   </div.button-wrapper>

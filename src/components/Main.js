@@ -9,7 +9,7 @@ import image4 from "../assets/mobile/image-man-texting.jpg";
 function Main() {
     return(
         <main>
-            <PageNumber number="1" />
+            <PageNumber number="01" />
             <Gallery images={[image1, image2, image3, image4]} />
             <div className="main-text-contents">
                 <div className="tagline">Built for modern use</div>

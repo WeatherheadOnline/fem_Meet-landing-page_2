@@ -10,7 +10,7 @@ export default function Header() {
                 <div className="header-central">                   
                     <h1>Group Chat for Everyone</h1>
                     <p className="description">Meet makes it easy to connect with others face-to-face virtually and collaborate across any device.</p>
-                    <ButtonWrapper thistext={[
+                    <ButtonWrapper buttonContents={[
                         ["button-cyan", "Download", "v1.3"], 
                         ["button-purple", "What is it?", ""]
                     ]}/>

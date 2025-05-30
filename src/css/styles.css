@@ -44,10 +44,6 @@
   background-position: left;
 }
 
-main {
-  background-color: pink;
-}
-
 .image-container {
   display: grid;
   grid-template: 1fr 1fr/1fr 1fr;
@@ -91,16 +87,19 @@ button {
 
 .page-number {
   height: 100px;
-  outline: 1px solid red;
   width: -moz-max-content;
   width: max-content;
   display: flex;
   align-items: flex-end;
+  background: linear-gradient(to right, transparent 48%, #d1d1df 49%, #d1d1df 51%, transparent 52%);
 }
 
 .number {
+  width: 30px;
+  height: 30px;
   border-radius: 50%;
-  outline: 1px solid green;
+  outline: 1px solid #d1d1df;
+  background-color: #fafafa;
 }
 
 .number p {

@@ -10,10 +10,14 @@ function Footer() {
                 h2Text="Experience more together"
                 pText="Stay connected with reliable HD meetings and unlimited one-on-one and group video sessions."
             />
-            <ButtonWrapper 
-                buttonContents={[
-                    ["button-purple", "Download", "v1.3"]
-                ]}
+            <ButtonWrapper buttonContents={[
+                {
+                    id: "1",
+                    class: "button-purple",
+                    text: "Download",
+                    spantext: "v1.3"
+                },
+            ]}
             />
         </footer>
     )

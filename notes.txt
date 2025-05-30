@@ -29,6 +29,55 @@ Working on making the button its own component.
 - Added text in the Main section. Made a WrapperH2P component that I can re-use in the footer. Passed in the h2 and p text contents -> rendered.
 ** Git commit **
 - Added a footer section, re-using the WrapperH2P and the ButtonWrapper elements.
+- Added grey outline and vertical line on number components.
+** Git commit **
+- Turned the button input from an array of arrays to an array of objects. This is a more appropriate data structure because now each piece of info has a label to make it clear that it's the id, or the class, or etc. Updated header and footer sections -> rendering just like before.
+
+
+In header:
+<ButtonWrapper buttonContents={[
+    ["button-cyan", "Download", "v1.3"], 
+    ["button-purple", "What is it?", ""]
+]}/>
+
+
+
+In footer:
+<ButtonWrapper 
+    buttonContents={[
+        ["button-purple", "Download", "v1.3"]
+    ]}
+/>
+
+
+
+In button.js:
+
+function Button(props) {
+    return(
+        <button className={props.buttonInput[0]}>{props.buttonInput[1]} <span>{props.buttonInput[2]}</span></button>
+    ) 
+};
+
+class ButtonWrapper extends React.Component {
+    render() {
+        const buttons = this.props.buttonContents.map((input) => {
+            return(
+                <Button buttonInput={input} />
+            )
+        });
+
+        return(
+            <div className="button-wrapper">
+                {buttons}
+            </div>
+        )
+    }
+};
+
+export default ButtonWrapper;
+
+
 
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

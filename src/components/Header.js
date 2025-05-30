@@ -1,6 +1,6 @@
 import ButtonWrapper from "./Button.js";
 
-export default function Header() {
+function Header() {
     return(
         <header>
             <div className="logo-container"></div>
@@ -11,9 +11,19 @@ export default function Header() {
                     <h1>Group Chat for Everyone</h1>
                     <p className="description">Meet makes it easy to connect with others face-to-face virtually and collaborate across any device.</p>
                     <ButtonWrapper buttonContents={[
-                        ["button-cyan", "Download", "v1.3"], 
-                        ["button-purple", "What is it?", ""]
-                    ]}/>
+                        {
+                            id: "1",
+                            class: "button-cyan",
+                            text: "Download",
+                            spantext: "v1.3"
+                        },
+                        {
+                            id: "2",
+                            class: "button-purple",
+                            text: "What is it?",
+                            spantext: ""
+                        },
+                    ]} />
 
                 </div>             
                 <div className="header-desktop header-desktop-right"></div>
@@ -21,3 +31,5 @@ export default function Header() {
         </header>
     )
 }
+
+export default Header

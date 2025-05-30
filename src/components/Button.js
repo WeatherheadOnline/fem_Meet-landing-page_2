@@ -6,15 +6,15 @@ import React from "react";
 */}
 
 function Button(props) {
+    const buttonId = `button-${props.buttonInput.id}`
     return(
-        <button className={props.buttonInput[0]}>{props.buttonInput[1]} <span>{props.buttonInput[2]}</span></button>
+        <button id={buttonId} className={props.buttonInput.class}>
+            {props.buttonInput.text} <span>{props.buttonInput.spantext}</span>
+        </button>
     ) 
 };
 
 class ButtonWrapper extends React.Component {
-    constructor(props){
-        super(props);
-    }
     render() {
         const buttons = this.props.buttonContents.map((input) => {
             return(
